@@ -2,16 +2,26 @@
 //  ContentView.swift
 //  BioMatrix
 //
-//  Created by Jain, Shikha on 5/20/21.
+//  Created by Jain, Eesha on 4/23/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+        TabView {
+            PickRound()
+                .tabItem {
+                    Image(systemName: "puzzlepiece.fill")
+                    Text("BioMatrix")
+                }
+            
+            Starred()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Starred")
+                }
+        }
     }
 }
 
