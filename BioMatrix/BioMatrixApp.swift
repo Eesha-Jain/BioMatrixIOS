@@ -2,7 +2,7 @@
 //  BioMatrixApp.swift
 //  BioMatrix
 //
-//  Created by Jain, Shikha on 5/20/21.
+//  Created by Jain, Eesha on 4/23/21.
 //
 
 import SwiftUI
@@ -11,7 +11,11 @@ import SwiftUI
 struct BioMatrixApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if (LocalStorage.launchedValue == "false") {
+                Welcome()
+            } else {
+                ContentView()
+            }
         }
     }
 }
