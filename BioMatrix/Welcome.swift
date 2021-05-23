@@ -43,7 +43,7 @@ struct Welcome: View {
                 
                 //Button
                 NavigationLink(destination: ContentView()
-                                .navigationBarHidden(true)
+                                //.navigationBarHidden(true)
                                 .navigationBarBackButtonHidden(true)
                                 .navigationBarTitle("BioMatrix", displayMode: .inline)
                 , tag: 1, selection: $actionState) {}
