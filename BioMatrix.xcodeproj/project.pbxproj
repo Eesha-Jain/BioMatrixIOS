@@ -64,6 +64,7 @@
 		8EA45CE4265765690001E030 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		8EA45CE7265765840001E030 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8EA45CEB265765970001E030 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		8EA45C92265757D00001E030 = {
 			isa = PBXGroup;
 			children = (
+				8EB26E782659E62C004365EB /* README.md */,
 				8EA45CAF265760600001E030 /* Launch Screen.storyboard */,
 				8EA45C9D265757D00001E030 /* BioMatrix */,
 				8EA45C9C265757D00001E030 /* Products */,
