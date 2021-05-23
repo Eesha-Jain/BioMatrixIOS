@@ -14,7 +14,7 @@ There are 3 different types of rounds you can select:
 - Speed Round: This allows you to answer questions within 7 seconds
 
 #### Note: Many of these features are still being implemented into the project. Additionally, feel free to comment on features that you would like to see added to this app!
-#### Note: Currently, this app cannot be found on the app store.
+#### Note: Currently, this app cannot be found on the app store yet.
 
 # Credits
 The sole developer of this project is **Eesha Jain**.
