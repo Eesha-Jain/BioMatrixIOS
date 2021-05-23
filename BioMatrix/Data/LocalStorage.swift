@@ -49,9 +49,10 @@ class LocalStorage {
         }
     }
     
-    public static func importDefaultQuestions() {
+    public static func importDefaultQuestions() -> [Question] {
         let q1 = Question(id: UUID(), category: "Genetics", question: "What type of bond forms between adenine and thymine?", answer: "Weak hydrogen bonds")
-        LocalStorage.questionsValue = [q1]
+        let q2 = Question(id: UUID(), category: "Cellular", question: "What type of RNA brings the amino acid to the ribosome?", answer: "tRNA")
+        return [q1, q2]
     }
 }
 

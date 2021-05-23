@@ -8,6 +8,8 @@
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Light.ttf</string>
 		<string>Roboto-Black.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Thin.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
