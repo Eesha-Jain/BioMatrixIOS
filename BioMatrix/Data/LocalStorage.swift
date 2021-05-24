@@ -23,26 +23,17 @@ class LocalStorage {
     
     public static var questionsValue: [Question] {
         set {
-            do {
-                let encoder = JSONEncoder()
-                let data = try encoder.encode(newValue)
-                UserDefaults.standard.set(data, forKey: questionsList)
-            } catch {
-                print("Unable to Encode Note (\(error))")
-            }
+            let data =  try! JSONEncoder().encode(newValue)
+            UserDefaults.standard.set(data, forKey: questionsList)
         }
         
         get {
             var note: [Question] = []
             
-            if let data = UserDefaults.standard.data(forKey: "note") {
-                do {
-                    let decoder = JSONDecoder()
-                    note = try decoder.decode([Question].self, from: data)
-                    return note
-                } catch {
-                    print("Unable to Decode Note (\(error))")
-                }
+            if let data = UserDefaults.standard.data(forKey: questionsList) {
+                let decoder = JSONDecoder()
+                note = try! decoder.decode([Question].self, from: data)
+                return note
             }
             
             return note
@@ -55,13 +46,3 @@ class LocalStorage {
         return [q1, q2]
     }
 }
-
-/*
- struct Question: Identifiable {
-     var id = UUID()
-     var category: String
-     var question: String
-     var answer: String
-     var starred: Bool = false
- }
- */

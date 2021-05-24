@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0AFA3D265B4FDA00F2CE44 /* GetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */; };
 		8EA45C9F265757D00001E030 /* BioMatrixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45C9E265757D00001E030 /* BioMatrixApp.swift */; };
 		8EA45CA1265757D00001E030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CA0265757D00001E030 /* ContentView.swift */; };
 		8EA45CA3265757D10001E030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA45CA2265757D10001E030 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuestion.swift; sourceTree = "<group>"; };
 		8EA45C9B265757D00001E030 /* BioMatrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMatrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA45C9E265757D00001E030 /* BioMatrixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMatrixApp.swift; sourceTree = "<group>"; };
 		8EA45CA0265757D00001E030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				8EB26E7F2659F76C004365EB /* Quest.swift */,
+				8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				8EA45CEC265765970001E030 /* Question.swift in Sources */,
 				8EB26E802659F76C004365EB /* Quest.swift in Sources */,
 				8EA45CE5265765690001E030 /* Welcome.swift in Sources */,
+				8E0AFA3D265B4FDA00F2CE44 /* GetQuestion.swift in Sources */,
 				8EA45CDC265762F90001E030 /* PickRound.swift in Sources */,
 				8EA45CD22657629E0001E030 /* TurtleRound.swift in Sources */,
 				8EA45CD9265762B70001E030 /* SpeedRound.swift in Sources */,

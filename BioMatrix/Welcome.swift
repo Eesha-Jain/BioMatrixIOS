@@ -49,7 +49,8 @@ struct Welcome: View {
                 , tag: 1, selection: $actionState) {}
                 
                 Button(action: {
-                    LocalStorage.questionsValue = LocalStorage.importDefaultQuestions()
+                    let list = LocalStorage.importDefaultQuestions()
+                    LocalStorage.questionsValue = list
                     LocalStorage.launchedValue = "true"
                     self.actionState = 1
                 }, label: {

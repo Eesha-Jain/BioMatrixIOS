@@ -8,25 +8,9 @@ import SwiftUI
 
 struct SpeedRound: View {
     @State var timeRemaining = 7
+    @State var question = blankQuestion()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    fileprivate func getRandomQuestion() -> Quest {
-        let list = LocalStorage.importDefaultQuestions()
-        //let list = LocalStorage.questionsValue
-        let randomInt = Int.random(in: 1..<list.count)
-        let question = list[randomInt]
-        return Quest(question: question)
-    }
-    
-    fileprivate func getRandomQuestionTESTT() -> Quest {
-        let q1 = Question(id: UUID(), category: "Genetics", question: "What type of bond forms between adenine and thymine?", answer: "Weak hydrogen bonds")
-        let list = [q1]
-        let randomInt = 0
-        let question = list[randomInt]
-        
-        return Quest(question: question)
-    }
-
+   
     var body: some View {
         VStack {
             LinearGradient(gradient: Gradient(colors: [Color("Purple"), Color("Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -55,7 +39,7 @@ struct SpeedRound: View {
             )
             
             VStack {
-                getRandomQuestionTESTT()
+                Quest(question: question)
                     .padding(10)
             }.background(
                 RoundedRectangle(
@@ -66,6 +50,8 @@ struct SpeedRound: View {
             ).padding(8)
             
             Spacer()
+        }.onAppear {
+            question = newQuestion()
         }
     }
 }
@@ -74,7 +60,6 @@ struct SpeedRound_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SpeedRound()
-                .preferredColorScheme(.dark)
         }
     }
 }
