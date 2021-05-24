@@ -13,6 +13,7 @@ struct SpeedRound: View {
    
     var body: some View {
         VStack {
+            //BioMatrix Text
             LinearGradient(gradient: Gradient(colors: [Color("Purple"), Color("Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .frame(height: 50)
                 .mask(Text("BIOMATRIX"))
@@ -20,13 +21,14 @@ struct SpeedRound: View {
                 .font(Font.custom("Roboto-Bold", size: 60))
                 .padding([.bottom], 10)
             
+            //Time Remaining
             Text("0:0\(timeRemaining)").onReceive(timer) { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1
                 }
             }
+            .frame(width: UIScreen.main.bounds.size.width * 0.85)
             .padding(10)
-            .padding([.leading, .trailing], 150)
             .foregroundColor(Color("OppositeText"))
             .font(Font.custom("Roboto-Bold", size: 30))
             .cornerRadius(25)
@@ -36,19 +38,24 @@ struct SpeedRound: View {
                     style: .continuous
                 )
                 .fill(Color("Gray"))
-            )
+            ).padding([.bottom], 10)
             
+            //Question
             VStack {
                 Quest(question: question)
                     .padding(10)
-            }.background(
+            }.frame(width: UIScreen.main.bounds.size.width * 0.89)
+            .background(
                 RoundedRectangle(
-                    cornerRadius: 10,
+                    cornerRadius: 12,
                     style: .continuous
                 )
                 .fill(Color("Red"))
-            ).padding(8)
+            )
             
+            //Input
+            
+            //Make Text go to Top
             Spacer()
         }.onAppear {
             question = newQuestion()
