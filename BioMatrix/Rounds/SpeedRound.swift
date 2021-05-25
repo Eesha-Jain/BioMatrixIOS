@@ -109,6 +109,26 @@ struct SpeedRound: View {
             
             //Make Text go to Top
             Spacer()
+            
+            Button(action: {
+                timeRemaining = 7
+                question = newQuestion()
+                opacity = 0
+                answer = ""
+                color = "White"
+                correct = ""
+            }, label: {
+                Text("Next")
+            }).padding(13)
+            .frame(width: UIScreen.main.bounds.size.width * 0.9)
+            .background(
+                RoundedRectangle(cornerRadius: 100, style: .continuous)
+                    .fill(Color("Purple"))
+            )
+            .foregroundColor(Color("Text"))
+            .font(Font.custom("Roboto-Light", size: 20))
+            .opacity(opacity)
+            
             Spacer()
             
             VStack {
@@ -120,6 +140,7 @@ struct SpeedRound: View {
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+            .animation(.easeOut)
 
         }.onAppear {
             question = newQuestion()
