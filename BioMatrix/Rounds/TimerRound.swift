@@ -19,7 +19,7 @@ struct TimerRound: View {
     @State var color: String = "White"
     
     //Other Variables
-    @State var question = blankQuestion()
+    @State var question = newQuestion()
     @State var list: [Question] = []
    
     var body: some View {
