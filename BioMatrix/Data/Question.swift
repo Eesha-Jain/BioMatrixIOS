@@ -9,8 +9,8 @@ import Foundation
 
 struct Question: Identifiable, Codable {
     var id = UUID()
-    var category: String
-    var question: String
-    var answer: String
+    let category: String
+    let question: String
+    let answer: String
     var starred: Bool = false
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E03604B2663533B008340C9 /* QuestionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03604A2663533B008340C9 /* QuestionBox.swift */; };
 		8E0AFA3D265B4FDA00F2CE44 /* GetQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */; };
 		8EA45C9F265757D00001E030 /* BioMatrixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45C9E265757D00001E030 /* BioMatrixApp.swift */; };
 		8EA45CA1265757D00001E030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CA0265757D00001E030 /* ContentView.swift */; };
@@ -34,10 +35,10 @@
 		8EA45CE5265765690001E030 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE4265765690001E030 /* Welcome.swift */; };
 		8EA45CE8265765840001E030 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE7265765840001E030 /* LocalStorage.swift */; };
 		8EA45CEC265765970001E030 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CEB265765970001E030 /* Question.swift */; };
-		8EB26E802659F76C004365EB /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB26E7F2659F76C004365EB /* Quest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E03604A2663533B008340C9 /* QuestionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBox.swift; sourceTree = "<group>"; };
 		8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuestion.swift; sourceTree = "<group>"; };
 		8EA45C9B265757D00001E030 /* BioMatrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMatrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA45C9E265757D00001E030 /* BioMatrixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMatrixApp.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		8EA45CE7265765840001E030 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8EA45CEB265765970001E030 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8EB26E7F2659F76C004365EB /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +185,8 @@
 		8EB26E7E2659F75D004365EB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8EB26E7F2659F76C004365EB /* Quest.swift */,
 				8E0AFA3C265B4FDA00F2CE44 /* GetQuestion.swift */,
+				8E03604A2663533B008340C9 /* QuestionBox.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 				8EA45CA1265757D00001E030 /* ContentView.swift in Sources */,
 				8EA45CDF265763110001E030 /* Starred.swift in Sources */,
 				8EA45C9F265757D00001E030 /* BioMatrixApp.swift in Sources */,
+				8E03604B2663533B008340C9 /* QuestionBox.swift in Sources */,
 				8EA45CEC265765970001E030 /* Question.swift in Sources */,
-				8EB26E802659F76C004365EB /* Quest.swift in Sources */,
 				8EA45CE5265765690001E030 /* Welcome.swift in Sources */,
 				8E0AFA3D265B4FDA00F2CE44 /* GetQuestion.swift in Sources */,
 				8EA45CDC265762F90001E030 /* PickRound.swift in Sources */,

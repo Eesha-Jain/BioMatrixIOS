@@ -3,6 +3,7 @@
 import Foundation
 
 var question = LocalStorage.questionsValue[0]
+var position = 0
 var set = false
 
 func getQuestion() -> Question {
@@ -13,9 +14,18 @@ func getQuestion() -> Question {
     let list = LocalStorage.questionsValue
     let randomInt = Int.random(in: 0..<list.count)
     question = list[randomInt]
+    position = randomInt
     set = true
     
     return question
+}
+
+func changeStarred() -> Bool {
+    var qv = LocalStorage.questionsValue
+    qv[position].starred = !qv[position].starred
+    LocalStorage.questionsValue = qv
+    question = LocalStorage.questionsValue[position]
+    return question.starred
 }
 
 func resetSet() {
@@ -23,9 +33,9 @@ func resetSet() {
 }
 
 func newQuestion() -> Question {
-    if (LocalStorage.questionsValue.count == 0) {
+    /*if (LocalStorage.questionsValue.count == 0) {
         LocalStorage.importDefaultQuestions()
-    }
+    }*/
     
     resetSet()
     return getQuestion()

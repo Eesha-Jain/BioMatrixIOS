@@ -28,20 +28,13 @@ struct TurtleRound: View {
                         .foregroundColor(Color("Purple"))
                         .font(Font.custom("Roboto-Bold", size: 60))
                         .padding([.bottom], 10)
+                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .animation(.easeOut)
                     
                     //Question
-                    VStack {
-                        Quest(question: question)
-                            .padding(10)
-                    }.frame(width: UIScreen.main.bounds.size.width * 0.89)
-                    .background(
-                        RoundedRectangle(
-                            cornerRadius: 12,
-                            style: .continuous
-                        )
-                        .fill(Color("Red"))
-                    )
-                    .padding([.bottom], 5)
+                    QuestionBox(question: question)
+                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .animation(.easeOut)
                     
                     //Input
                     HStack {
@@ -79,12 +72,14 @@ struct TurtleRound: View {
                         .foregroundColor(Color("OppositeText"))
                         .font(Font.custom("Roboto-Light", size: 20))
                     }.padding([.bottom], 10)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeOut)
                     
                     //Next
                     Button(action: {
-                        list.append(question)
+                        list.insert(question, at: 0)
                         if (list.count > 5) {
-                            list.remove(at: 0)
+                            list.remove(at: 5)
                         }
                         
                         question = newQuestion()
@@ -104,6 +99,8 @@ struct TurtleRound: View {
                     .font(Font.custom("Roboto-Light", size: 20))
                     .opacity(opacity)
                     .padding([.bottom], 10)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeOut)
                     
                     //Make Text go to Top
                     Spacer()
@@ -147,8 +144,6 @@ struct TurtleRound: View {
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             .animation(.easeOut)
         }
-        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-        .animation(.easeOut)
     }
 }
 

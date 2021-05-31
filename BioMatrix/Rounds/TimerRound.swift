@@ -33,6 +33,8 @@ struct TimerRound: View {
                         .foregroundColor(Color("Purple"))
                         .font(Font.custom("Roboto-Bold", size: 60))
                         .padding([.bottom], 10)
+                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .animation(.easeOut)
                     
                     //Time Remaining
                     Text("0:\(timeRemaining)").onReceive(timer) { _ in
@@ -58,20 +60,14 @@ struct TimerRound: View {
                         )
                         .fill(Color("Gray"))
                     ).padding([.bottom], 10)
+                    .animation(.easeIn)
+                    .animation(.easeOut)
                     
                     //Question
-                    VStack {
-                        Quest(question: question)
-                            .padding(10)
-                    }.frame(width: UIScreen.main.bounds.size.width * 0.89)
-                    .background(
-                        RoundedRectangle(
-                            cornerRadius: 12,
-                            style: .continuous
-                        )
-                        .fill(Color("Red"))
-                    )
-                    .padding([.bottom], 5)
+                    QuestionBox(question: question)
+                        .padding([.bottom], 5)
+                        .animation(.easeIn)
+                        .animation(.easeOut)
                     
                     //Input
                     HStack {
@@ -110,12 +106,14 @@ struct TimerRound: View {
                         .foregroundColor(Color("OppositeText"))
                         .font(Font.custom("Roboto-Light", size: 20))
                     }.padding([.bottom], 10)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeOut)
                     
                     //Next
                     Button(action: {
-                        list.append(question)
+                        list.insert(question, at: 0)
                         if (list.count > 5) {
-                            list.remove(at: 0)
+                            list.remove(at: 5)
                         }
                         
                         timeRemaining = 22
@@ -136,6 +134,8 @@ struct TimerRound: View {
                     .font(Font.custom("Roboto-Light", size: 20))
                     .opacity(opacity)
                     .padding([.bottom], 10)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeOut)
                     
                     //Make Text go to Top
                     Spacer()
@@ -179,8 +179,6 @@ struct TimerRound: View {
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             .animation(.easeOut)
         }
-        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-        .animation(.easeOut)
     }
 }
 
