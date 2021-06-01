@@ -20,12 +20,11 @@ func getQuestion() -> Question {
     return question
 }
 
-func changeStarred() -> Bool {
+func changeStarred() {
     var qv = LocalStorage.questionsValue
     qv[position].starred = !qv[position].starred
     LocalStorage.questionsValue = qv
     question = LocalStorage.questionsValue[position]
-    return question.starred
 }
 
 func resetSet() {

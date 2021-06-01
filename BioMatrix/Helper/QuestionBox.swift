@@ -18,7 +18,7 @@ struct QuestionBox: View {
                     Image(systemName: "star.fill")
                         .foregroundColor(Color(question.starred ? "StarYes" : "StarNo"))
                         .onTapGesture {
-                            
+                            changeStarred()
                         }
                 }
                 
@@ -41,6 +41,6 @@ struct QuestionBox: View {
 
 struct QuestionBox_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionBox(question: Question(category: "Cells", question: "What is the process of one cell splitting into two identical daughter cells in the human body?", answer: "Mitosis"))
+        QuestionBox(question: getQuestion())
     }
 }
