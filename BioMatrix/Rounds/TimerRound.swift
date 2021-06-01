@@ -19,7 +19,7 @@ struct TimerRound: View {
     @State var color: String = "White"
     
     //Other Variables
-    @State var question = newQuestion()
+    @State var question = LocalStorage.currentQuestion.question
     @State var list: [Question] = []
    
     var body: some View {
@@ -160,8 +160,6 @@ struct TimerRound: View {
                         .fill(Color("Red"))
                     )
                     .padding([.bottom], 5)
-                }.onAppear {
-                    question = newQuestion()
                 }
             }
             

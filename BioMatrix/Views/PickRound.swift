@@ -59,7 +59,9 @@ struct PickRound: View {
                     
                     Spacer()
                 }
-            }
+            }.onAppear(perform: {
+                LocalStorage.currentQuestion.question = newQuestion()
+            }) 
         }
     }
 }
