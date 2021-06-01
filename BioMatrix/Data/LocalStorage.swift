@@ -10,6 +10,7 @@ import Foundation
 class LocalStorage {
     private static var hasLaunched: String = "hasLaunched"
     private static var questionsList: String = "questionsList"
+    private static var curQuestion: String = "currentQuestion"
     
     public static var launchedValue: String {
         set {
@@ -33,6 +34,25 @@ class LocalStorage {
             if let data = UserDefaults.standard.data(forKey: questionsList) {
                 let decoder = JSONDecoder()
                 note = try! decoder.decode([Question].self, from: data)
+                return note
+            }
+            
+            return note
+        }
+    }
+    
+    public static var currentQuestion: CurrentQuestion {
+        set {
+            let data = try! JSONEncoder().encode(newValue)
+            UserDefaults.standard.set(data, forKey: curQuestion)
+        }
+        
+        get {
+            var note: CurrentQuestion = CurrentQuestion(question: blankQuestion(), position: 0, set: false)
+            
+            if let data = UserDefaults.standard.data(forKey: curQuestion) {
+                let decoder = JSONDecoder()
+                note = try! decoder.decode(CurrentQuestion.self, from: data)
                 return note
             }
             

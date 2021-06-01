@@ -2,33 +2,29 @@
 
 import Foundation
 
-var question = LocalStorage.questionsValue[0]
-var position = 0
-var set = false
-
 func getQuestion() -> Question {
-    if (set) {
-        return question
+    if (LocalStorage.currentQuestion.set) {
+        return LocalStorage.currentQuestion.question
     }
     
     let list = LocalStorage.questionsValue
     let randomInt = Int.random(in: 0..<list.count)
-    question = list[randomInt]
-    position = randomInt
-    set = true
+    LocalStorage.currentQuestion.question = list[randomInt]
+    LocalStorage.currentQuestion.position = randomInt
+    LocalStorage.currentQuestion.set = true
     
-    return question
+    return LocalStorage.currentQuestion.question
 }
 
 func changeStarred() {
     var qv = LocalStorage.questionsValue
-    qv[position].starred = !qv[position].starred
+    qv[LocalStorage.currentQuestion.position].starred = !qv[LocalStorage.currentQuestion.position].starred
     LocalStorage.questionsValue = qv
-    question = LocalStorage.questionsValue[position]
+    LocalStorage.currentQuestion.question = LocalStorage.questionsValue[LocalStorage.currentQuestion.position]
 }
 
 func resetSet() {
-    set = false
+    LocalStorage.currentQuestion.set = false
 }
 
 func newQuestion() -> Question {
