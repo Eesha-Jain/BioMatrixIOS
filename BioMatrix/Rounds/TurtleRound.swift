@@ -32,7 +32,7 @@ struct TurtleRound: View {
                         .animation(.easeOut)
                     
                     //Question
-                    QuestionBox(question: question)
+                    QuestionBox()
                         .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
                         .animation(.easeOut)
                     
@@ -143,7 +143,9 @@ struct TurtleRound: View {
             .opacity(opacity)
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             .animation(.easeOut)
-        }
+        }.onAppear(perform: {
+            LocalStorage.currentQuestion.question = question
+        })
     }
 }
 

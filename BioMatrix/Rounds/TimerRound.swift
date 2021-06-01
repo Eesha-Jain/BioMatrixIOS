@@ -64,7 +64,7 @@ struct TimerRound: View {
                     .animation(.easeOut)
                     
                     //Question
-                    QuestionBox(question: question)
+                    QuestionBox()
                         .padding([.bottom], 5)
                         .animation(.easeIn)
                         .animation(.easeOut)

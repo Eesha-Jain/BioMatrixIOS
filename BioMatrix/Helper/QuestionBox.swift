@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct QuestionBox: View {
-    var question: Question
+    @State var question: Question = LocalStorage.currentQuestion.question
     
     var body: some View {
         VStack {
@@ -19,12 +19,14 @@ struct QuestionBox: View {
                         .foregroundColor(Color(question.starred ? "StarYes" : "StarNo"))
                         .onTapGesture {
                             changeStarred()
+                            question = LocalStorage.currentQuestion.question
                         }
                 }
                 
                 Text(question.question)
                     .foregroundColor(Color("Text"))
                     .font(Font.custom("Roboto-Light", size: 20))
+                
             }.padding(10)
         }
         .frame(width: UIScreen.main.bounds.size.width * 0.89)
@@ -41,6 +43,6 @@ struct QuestionBox: View {
 
 struct QuestionBox_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionBox(question: getQuestion())
+        QuestionBox()
     }
 }
