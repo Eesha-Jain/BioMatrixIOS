@@ -1,4 +1,4 @@
-//File GetQuestion.swift in Project BioMatrix: Created by Eesha Jain on 5/23/21
+//File QuestionFunctions.swift in Project BioMatrix: Created by Eesha Jain on 5/23/21
 
 import Foundation
 
@@ -14,13 +14,6 @@ func getQuestion() -> Question {
     LocalStorage.currentQuestion.set = true
     
     return LocalStorage.currentQuestion.question
-}
-
-func changeStarred() {
-    var qv = LocalStorage.questionsValue
-    qv[LocalStorage.currentQuestion.position].starred = !qv[LocalStorage.currentQuestion.position].starred
-    LocalStorage.questionsValue = qv
-    LocalStorage.currentQuestion.question = LocalStorage.questionsValue[LocalStorage.currentQuestion.position]
 }
 
 func resetSet() {

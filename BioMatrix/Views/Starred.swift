@@ -8,28 +8,62 @@
 import SwiftUI
 
 struct Starred: View {
+    @State var starredQuestions: [Question] = getStarredQuestions()
+    
     var body: some View {
         VStack {
-            List {
-                /*
-                ForEach(questions, id: \.id) { question in
+            if (starredQuestions.count > 0) {
+                ForEach(starredQuestions) { question in
                     VStack {
-                        Text(question.category ?? "Error - no question")
-                            .font(Font.custom("Roboto-Regular", size: 12))
-                        Text(question.question ?? "Error - no question")
-                    }.padding(10)
-                    .padding([.leading, .trailing], 150)
-                    .foregroundColor(Color("OppositeText"))
-                    .font(Font.custom("Roboto-Bold", size: 30))
-                    .cornerRadius(7)
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Text(question.category)
+                                    .foregroundColor(Color("Text"))
+                                    .font(Font.custom("Roboto-Regular", size: 20))
+                                Spacer()
+                                
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color("StarYes"))
+                                    .onTapGesture {
+                                        changeStarredPage(q: question)
+                                        starredQuestions = getStarredQuestions()
+                                    }
+                            }
+                            
+                            Text(question.question)
+                                .foregroundColor(Color("Text"))
+                                .font(Font.custom("Roboto-Light", size: 20))
+                                .padding([.bottom], 5)
+                            
+                            HStack {
+                                Text("Answer: " + question.answer)
+                                    .foregroundColor(Color("Text"))
+                                    .font(Font.custom("Roboto-LightItalic", size: 20))
+                                Spacer()
+                            }.padding([.leading], 20)
+                            
+                        }.padding(10)
+                    }
+                    .frame(width: UIScreen.main.bounds.size.width * 0.89)
                     .background(
                         RoundedRectangle(
-                            cornerRadius: 100,
+                            cornerRadius: 12,
                             style: .continuous
                         )
                         .fill(Color("Red"))
                     )
-                }*/
+                    .padding([.bottom], 5)
+                }
+            } else {
+                HStack {
+                    Text("No starred questions")
+                        .foregroundColor(Color("OppositeGray"))
+                        .font(Font.custom("Roboto-LightItalic", size: 20))
+                    
+                    Image(systemName: "star.fill")
+                        .foregroundColor(Color("OppositeGray"))
+                }
             }
         }
     }
