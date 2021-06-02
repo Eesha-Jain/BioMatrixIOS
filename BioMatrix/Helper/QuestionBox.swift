@@ -38,6 +38,9 @@ struct QuestionBox: View {
             .fill(Color("Red"))
         )
         .padding([.bottom], 5)
+        .onAppear(perform: {
+            question = LocalStorage.currentQuestion.question
+        })
     }
 }
 

@@ -174,7 +174,10 @@ struct SpeedRound: View {
             .opacity(opacity)
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             .animation(.easeOut)
-        }
+        }.onAppear(perform: {
+            question = newQuestion()
+            LocalStorage.currentQuestion.question = question
+        })
     }
 }
 
