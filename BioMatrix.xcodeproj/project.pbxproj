@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E03604B2663533B008340C9 /* QuestionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03604A2663533B008340C9 /* QuestionBox.swift */; };
+		8E36C2CA2669E39C0052357C /* biology_questions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8E36C2C92669E39C0052357C /* biology_questions.csv */; };
 		8E676A782665D94A00ACB083 /* CurrentQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E676A772665D94A00ACB083 /* CurrentQuestion.swift */; };
 		8E8C3AEB26672B6E003E3D22 /* QuestionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */; };
 		8E8C3AEE26672B78003E3D22 /* StarredFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		8E03604A2663533B008340C9 /* QuestionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBox.swift; sourceTree = "<group>"; };
+		8E36C2C92669E39C0052357C /* biology_questions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = biology_questions.csv; path = ../../../../biology_questions.csv; sourceTree = "<group>"; };
+		8E36C2CC2669E9540052357C /* BugstoFix.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BugstoFix.md; sourceTree = "<group>"; };
 		8E676A772665D94A00ACB083 /* CurrentQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestion.swift; sourceTree = "<group>"; };
 		8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFunctions.swift; sourceTree = "<group>"; };
 		8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredFunctions.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 				8EA45CA0265757D00001E030 /* ContentView.swift */,
 				8EA45CA7265757D10001E030 /* Info.plist */,
 				8EA45CA4265757D10001E030 /* Preview Content */,
+				8E36C2CC2669E9540052357C /* BugstoFix.md */,
 			);
 			path = BioMatrix;
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 		8EA45CE3265765550001E030 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8E36C2C92669E39C0052357C /* biology_questions.csv */,
 				8EA45CE7265765840001E030 /* LocalStorage.swift */,
 				8EA45CEB265765970001E030 /* Question.swift */,
 				8E676A772665D94A00ACB083 /* CurrentQuestion.swift */,
@@ -269,6 +274,7 @@
 				8EA45CC82657617C0001E030 /* Roboto-Italic.ttf in Resources */,
 				8EA45CCB2657617C0001E030 /* Roboto-Regular.ttf in Resources */,
 				8EA45CA6265757D10001E030 /* Preview Assets.xcassets in Resources */,
+				8E36C2CA2669E39C0052357C /* biology_questions.csv in Resources */,
 				8EA45CA3265757D10001E030 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

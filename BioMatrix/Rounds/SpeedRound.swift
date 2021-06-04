@@ -42,7 +42,7 @@ struct SpeedRound: View {
                         } else {
                             if (correct == "") {
                                 opacity = 100
-                                correct = "Time's Up!"
+                                correct = "Time's Up! Answer: \(question.answer)"
                                 color = "Incorrect"
                             }
                         }

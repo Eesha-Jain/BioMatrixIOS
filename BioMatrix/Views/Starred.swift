@@ -5,6 +5,12 @@
 //  Created by Jain, Eesha on 4/25/21.
 //
 
+/*
+ NEXT TO IMPLEMENT: CLICK TO REVEAL ANSWER
+ AFTER THAT: DATABASE OF QUESTIONS
+ THEN DONE!
+ */
+
 import SwiftUI
 
 struct Starred: View {
