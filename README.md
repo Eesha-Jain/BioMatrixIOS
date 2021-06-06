@@ -16,7 +16,8 @@ There are 3 different types of rounds you can select:
 #### Note: Currently, this app cannot be found on the app store yet.
 
 ## Walkthrough
-[<img width="500" alt="BioMatrixWalkthrough" src="https://user-images.githubusercontent.com/68827992/120911825-19061380-c63f-11eb-87c0-b859761c4e65.png">](https://drive.google.com/file/d/1zz8Pd0OE7Qcr8T16MbEc9JoyyCbHy7Hy/view?usp=sharing)
+[<img width="685" alt="BioMatrixTitle" src="https://user-images.githubusercontent.com/68827992/120912951-528f4c80-c648-11eb-8b05-f2eab61159b7.png">](https://drive.google.com/file/d/19Rrt5dVZAJU-E66VjpvfNWktAuLRfIN0/view?usp=sharing)
+
 
 # Credits
 The sole developer of this project is **Eesha Jain**.
