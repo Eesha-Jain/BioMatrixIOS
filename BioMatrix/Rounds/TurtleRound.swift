@@ -87,7 +87,7 @@ struct TurtleRound: View {
                                     correct = "Correct"
                                     color = "Correct"
                                 } else {
-                                    correct = "Incorrect"
+                                    correct = "Incorrect. Answer: \(question.answer)"
                                     color = "Incorrect"
                                 }
                             }
