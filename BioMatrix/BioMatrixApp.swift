@@ -14,7 +14,9 @@ struct BioMatrixApp: App {
             if (LocalStorage.launchedValue == "false") {
                 Welcome()
             } else {
-                ContentView()
+                ContentView().onAppear {
+                    LocalStorage.currentQuestion.set = false
+                }
             }
         }
     }

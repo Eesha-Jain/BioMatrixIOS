@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E03604B2663533B008340C9 /* QuestionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03604A2663533B008340C9 /* QuestionBox.swift */; };
 		8E36C2CA2669E39C0052357C /* biology_questions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8E36C2C92669E39C0052357C /* biology_questions.csv */; };
 		8E676A782665D94A00ACB083 /* CurrentQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E676A772665D94A00ACB083 /* CurrentQuestion.swift */; };
 		8E8C3AEB26672B6E003E3D22 /* QuestionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */; };
@@ -38,12 +37,11 @@
 		8EA45CE5265765690001E030 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE4265765690001E030 /* Welcome.swift */; };
 		8EA45CE8265765840001E030 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE7265765840001E030 /* LocalStorage.swift */; };
 		8EA45CEC265765970001E030 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CEB265765970001E030 /* Question.swift */; };
+		8EEA7139266B1796007183DE /* ImportQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA7138266B1796007183DE /* ImportQs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E03604A2663533B008340C9 /* QuestionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBox.swift; sourceTree = "<group>"; };
 		8E36C2C92669E39C0052357C /* biology_questions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = biology_questions.csv; path = ../../../../biology_questions.csv; sourceTree = "<group>"; };
-		8E36C2CC2669E9540052357C /* BugstoFix.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BugstoFix.md; sourceTree = "<group>"; };
 		8E676A772665D94A00ACB083 /* CurrentQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestion.swift; sourceTree = "<group>"; };
 		8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFunctions.swift; sourceTree = "<group>"; };
 		8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredFunctions.swift; sourceTree = "<group>"; };
@@ -76,6 +74,7 @@
 		8EA45CE7265765840001E030 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		8EA45CEB265765970001E030 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8EEA7138266B1796007183DE /* ImportQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportQs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +138,6 @@
 				8EA45CA0265757D00001E030 /* ContentView.swift */,
 				8EA45CA7265757D10001E030 /* Info.plist */,
 				8EA45CA4265757D10001E030 /* Preview Content */,
-				8E36C2CC2669E9540052357C /* BugstoFix.md */,
 			);
 			path = BioMatrix;
 			sourceTree = "<group>";
@@ -195,9 +193,9 @@
 		8EB26E7E2659F75D004365EB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8E03604A2663533B008340C9 /* QuestionBox.swift */,
 				8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */,
 				8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */,
+				8EEA7138266B1796007183DE /* ImportQs.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -292,11 +290,11 @@
 				8E8C3AEB26672B6E003E3D22 /* QuestionFunctions.swift in Sources */,
 				8EA45CDF265763110001E030 /* Starred.swift in Sources */,
 				8EA45C9F265757D00001E030 /* BioMatrixApp.swift in Sources */,
-				8E03604B2663533B008340C9 /* QuestionBox.swift in Sources */,
 				8EA45CEC265765970001E030 /* Question.swift in Sources */,
 				8EA45CE5265765690001E030 /* Welcome.swift in Sources */,
 				8E8C3AEE26672B78003E3D22 /* StarredFunctions.swift in Sources */,
 				8EA45CDC265762F90001E030 /* PickRound.swift in Sources */,
+				8EEA7139266B1796007183DE /* ImportQs.swift in Sources */,
 				8EA45CD22657629E0001E030 /* TurtleRound.swift in Sources */,
 				8EA45CD9265762B70001E030 /* SpeedRound.swift in Sources */,
 				8E676A782665D94A00ACB083 /* CurrentQuestion.swift in Sources */,

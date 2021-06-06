@@ -16,16 +16,8 @@ func getQuestion() -> Question {
     return LocalStorage.currentQuestion.question
 }
 
-func resetSet() {
-    LocalStorage.currentQuestion.set = false
-}
-
 func newQuestion() -> Question {
-    /*if (LocalStorage.questionsValue.count == 0) {
-        LocalStorage.importDefaultQuestions()
-    }*/
-    
-    resetSet()
+    LocalStorage.currentQuestion.set = false
     return getQuestion()
 }
 

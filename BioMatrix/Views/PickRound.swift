@@ -5,7 +5,7 @@ import SwiftUI
 struct PickRound: View {
     var body: some View {
         VStack {
-            NavigationView {
+            //NavigationView {
                 VStack {
                     LinearGradient(gradient: Gradient(colors: [Color("Purple"), Color("Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .frame(height: 50)
@@ -60,9 +60,11 @@ struct PickRound: View {
                     Spacer()
                 }
             }.onAppear(perform: {
-                LocalStorage.currentQuestion.question = newQuestion()
+                if (LocalStorage.currentQuestion.set == false) {
+                    LocalStorage.currentQuestion.question = newQuestion()
+                }
             }) 
-        }
+       // }
     }
 }
 

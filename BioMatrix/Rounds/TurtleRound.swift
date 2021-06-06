@@ -32,9 +32,40 @@ struct TurtleRound: View {
                         .animation(.easeOut)
                     
                     //Question
-                    QuestionBox()
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-                        .animation(.easeOut)
+                    VStack {
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Text(question.category)
+                                    .foregroundColor(Color("Text"))
+                                    .font(Font.custom("Roboto-Regular", size: 20))
+                                Spacer()
+                                
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color(question.starred ? "StarYes" : "StarNo"))
+                                    .onTapGesture {
+                                        changeStarred()
+                                        question = LocalStorage.currentQuestion.question
+                                    }
+                            }
+                            
+                            Text(question.question)
+                                .foregroundColor(Color("Text"))
+                                .font(Font.custom("Roboto-Light", size: 20))
+                            
+                        }.padding(10)
+                    }
+                    .frame(width: UIScreen.main.bounds.size.width * 0.89)
+                    .background(
+                        RoundedRectangle(
+                            cornerRadius: 12,
+                            style: .continuous
+                        )
+                        .fill(Color("Red"))
+                    )
+                    .padding([.bottom], 5)
+                    .animation(.easeIn)
+                    .animation(.easeOut)
                     
                     //Input
                     HStack {
@@ -142,8 +173,7 @@ struct TurtleRound: View {
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             .animation(.easeOut)
         }.onAppear(perform: {
-            question = newQuestion()
-            LocalStorage.currentQuestion.question = question
+            question = LocalStorage.currentQuestion.question
         })
     }
 }

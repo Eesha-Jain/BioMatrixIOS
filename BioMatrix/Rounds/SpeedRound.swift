@@ -32,7 +32,7 @@ struct SpeedRound: View {
                         .foregroundColor(Color("Purple"))
                         .font(Font.custom("Roboto-Bold", size: 60))
                         .padding([.bottom], 10)
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .animation(.easeIn)
                         .animation(.easeOut)
                     
                     //Time Remaining
@@ -59,13 +59,44 @@ struct SpeedRound: View {
                         )
                         .fill(Color("Gray"))
                     ).padding([.bottom], 10)
-                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeIn)
                     .animation(.easeOut)
                     
                     //Question
-                    QuestionBox()
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-                        .animation(.easeOut)
+                    VStack {
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Text(question.category)
+                                    .foregroundColor(Color("Text"))
+                                    .font(Font.custom("Roboto-Regular", size: 20))
+                                Spacer()
+                                
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color(question.starred ? "StarYes" : "StarNo"))
+                                    .onTapGesture {
+                                        changeStarred()
+                                        question = LocalStorage.currentQuestion.question
+                                    }
+                            }
+                            
+                            Text(question.question)
+                                .foregroundColor(Color("Text"))
+                                .font(Font.custom("Roboto-Light", size: 20))
+                            
+                        }.padding(10)
+                    }
+                    .frame(width: UIScreen.main.bounds.size.width * 0.89)
+                    .background(
+                        RoundedRectangle(
+                            cornerRadius: 12,
+                            style: .continuous
+                        )
+                        .fill(Color("Red"))
+                    )
+                    .padding([.bottom], 5)
+                    .animation(.easeIn)
+                    .animation(.easeOut)
                     
                     //Input
                     HStack {
@@ -132,7 +163,7 @@ struct SpeedRound: View {
                     .font(Font.custom("Roboto-Light", size: 20))
                     .opacity(opacity)
                     .padding([.bottom], 10)
-                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeIn)
                     .animation(.easeOut)
                     
                     //Make Text go to Top
@@ -172,11 +203,10 @@ struct SpeedRound: View {
             .frame(width: UIScreen.main.bounds.size.width, height: 40)
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
-            .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+            .animation(.easeIn)
             .animation(.easeOut)
         }.onAppear(perform: {
-            question = newQuestion()
-            LocalStorage.currentQuestion.question = question
+            question = LocalStorage.currentQuestion.question
         })
     }
 }

@@ -71,6 +71,8 @@ struct Starred: View {
                         .foregroundColor(Color("OppositeGray"))
                 }
             }
+        }.onAppear {
+            starredQuestions = getStarredQuestions()
         }
     }
 }
