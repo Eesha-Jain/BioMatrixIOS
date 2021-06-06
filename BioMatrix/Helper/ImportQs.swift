@@ -23,7 +23,7 @@ func readCSV() -> [[String]] {
             var answer = [[String]]()
             
             for c in parsed {
-                answer.append(c.components(separatedBy: ","))
+                answer.append(c.components(separatedBy: "::"))
             }
             
             return answer
