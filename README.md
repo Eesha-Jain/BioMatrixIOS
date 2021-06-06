@@ -15,5 +15,8 @@ There are 3 different types of rounds you can select:
 
 #### Note: Currently, this app cannot be found on the app store yet.
 
+## Walkthrough
+
+
 # Credits
 The sole developer of this project is **Eesha Jain**.
