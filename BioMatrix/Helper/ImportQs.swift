@@ -7,7 +7,8 @@ func importDefaultQuestions() -> [Question] {
     var list: [Question] = []
     
     for quest in arr {
-        let question = Question(category: quest[0], question: quest[1], answer: quest[2])
+        let split = quest[2].components(separatedBy: "|")
+        let question = Question(category: quest[0], question: quest[1], answer: split)
         list.append(question)
     }
     

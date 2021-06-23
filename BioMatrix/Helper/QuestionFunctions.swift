@@ -22,5 +22,5 @@ func newQuestion() -> Question {
 }
 
 func blankQuestion() -> Question {
-    return Question(category: "", question: "", answer: "")
+    return Question(category: "", question: "", answer: [""])
 }

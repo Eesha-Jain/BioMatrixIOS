@@ -116,11 +116,20 @@ struct TimerRound: View {
                             if (timeRemaining != 0 && correct == "") {
                                 timeRemaining = 0
                                 opacity = 100
-                                if (answer.lowercased() == question.answer.lowercased()) {
+                                var right = false;
+                                
+                                for answer in question.answer {
+                                    if (answer.lowercased() == answer) {
+                                        right = true;
+                                        break;
+                                    }
+                                }
+                                
+                                if (right) {
                                     correct = "Correct"
                                     color = "Correct"
                                 } else {
-                                    correct = "Incorrect. Answer: \(question.answer)"
+                                    correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "Incorrect"
                                 }
                             }
@@ -171,25 +180,7 @@ struct TimerRound: View {
                     Spacer()
                     
                     //Previous questions
-                    ForEach(list) { q in
-                        HStack {
-                            Text(q.category)
-                                .font(Font.custom("Roboto-Medium", size: 20))
-                                .foregroundColor(Color("Text"))
-                            Spacer()
-                            Text(q.answer)
-                                .font(Font.custom("Roboto-Light", size: 20))
-                                .foregroundColor(Color("Text"))
-                        }.padding(10)
-                    }.frame(width: UIScreen.main.bounds.size.width * 0.89)
-                    .background(
-                        RoundedRectangle(
-                            cornerRadius: 12,
-                            style: .continuous
-                        )
-                        .fill(Color("Red"))
-                    )
-                    .padding([.bottom], 5)
+                    PreviousQuestions(list: list)
                 }
             }
             

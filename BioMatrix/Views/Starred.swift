@@ -43,7 +43,7 @@ struct Starred: View {
                                 .padding([.bottom], 5)
                             
                             HStack {
-                                Text("Answer: " + question.answer)
+                                Text("Answer: " + question.answer[0])
                                     .foregroundColor(Color("Text"))
                                     .font(Font.custom("Roboto-LightItalic", size: 20))
                                 Spacer()
