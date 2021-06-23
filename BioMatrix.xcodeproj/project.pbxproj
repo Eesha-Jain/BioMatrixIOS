@@ -38,6 +38,7 @@
 		8EA45CE8265765840001E030 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE7265765840001E030 /* LocalStorage.swift */; };
 		8EA45CEC265765970001E030 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CEB265765970001E030 /* Question.swift */; };
 		8EEA7139266B1796007183DE /* ImportQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA7138266B1796007183DE /* ImportQs.swift */; };
+		8EFF704B2682E75100D8307F /* PreviousQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF704A2682E75100D8307F /* PreviousQuestions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		8EA45CEB265765970001E030 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EEA7138266B1796007183DE /* ImportQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportQs.swift; sourceTree = "<group>"; };
+		8EFF704A2682E75100D8307F /* PreviousQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousQuestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */,
 				8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */,
 				8EEA7138266B1796007183DE /* ImportQs.swift */,
+				8EFF704A2682E75100D8307F /* PreviousQuestions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				8EA45CE5265765690001E030 /* Welcome.swift in Sources */,
 				8E8C3AEE26672B78003E3D22 /* StarredFunctions.swift in Sources */,
 				8EA45CDC265762F90001E030 /* PickRound.swift in Sources */,
+				8EFF704B2682E75100D8307F /* PreviousQuestions.swift in Sources */,
 				8EEA7139266B1796007183DE /* ImportQs.swift in Sources */,
 				8EA45CD22657629E0001E030 /* TurtleRound.swift in Sources */,
 				8EA45CD9265762B70001E030 /* SpeedRound.swift in Sources */,

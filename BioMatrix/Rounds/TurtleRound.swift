@@ -83,11 +83,19 @@ struct TurtleRound: View {
                         Button(action: {
                             if (correct == "") {
                                 opacity = 100
-                                if (answer.lowercased() == question.answer.lowercased()) {
+                                var right = false;
+                                
+                                for ans in question.answer {
+                                    if (answer.lowercased() == ans.lowercased()) {
+                                        right = true;
+                                    }
+                                }
+                                
+                                if (right) {
                                     correct = "Correct"
                                     color = "Correct"
                                 } else {
-                                    correct = "Incorrect. Answer: \(question.answer)"
+                                    correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "Incorrect"
                                 }
                             }
@@ -137,25 +145,7 @@ struct TurtleRound: View {
                     Spacer()
                     
                     //Previous questions
-                    ForEach(list) { q in
-                        HStack {
-                            Text(q.category)
-                                .font(Font.custom("Roboto-Medium", size: 20))
-                                .foregroundColor(Color("Text"))
-                            Spacer()
-                            Text(q.answer)
-                                .font(Font.custom("Roboto-Light", size: 20))
-                                .foregroundColor(Color("Text"))
-                        }.padding(10)
-                    }.frame(width: UIScreen.main.bounds.size.width * 0.89)
-                    .background(
-                        RoundedRectangle(
-                            cornerRadius: 12,
-                            style: .continuous
-                        )
-                        .fill(Color("Red"))
-                    )
-                    .padding([.bottom], 5)
+                    PreviousQuestions(list: list)
                 }
             }
             
@@ -164,10 +154,12 @@ struct TurtleRound: View {
             //Bottom message
             VStack {
                 Text("\(correct)")
+                    .lineLimit(nil)
                     .font(Font.custom("Roboto-Bold", size:20))
                     .foregroundColor(Color("OppositeText"))
             }
-            .frame(width: UIScreen.main.bounds.size.width, height: 40)
+            .padding(10)
+            .frame(width: UIScreen.main.bounds.size.width)
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
@@ -181,5 +173,6 @@ struct TurtleRound: View {
 struct TurtleRound_Previews: PreviewProvider {
     static var previews: some View {
         TurtleRound()
+
     }
 }

@@ -11,6 +11,6 @@ struct Question: Identifiable, Codable {
     var id = UUID()
     let category: String
     let question: String
-    let answer: String
+    let answer: [String]
     var starred: Bool = false
 }
