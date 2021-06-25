@@ -127,7 +127,10 @@ struct SpeedRound: View {
                                 if (right) {
                                     correct = "Correct"
                                     color = "Correct"
+                                    LocalStorage.coinsValue += 20
                                 } else {
+                                    print(question.answer[0])
+                                    
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "Incorrect"
                                 }
@@ -191,7 +194,8 @@ struct SpeedRound: View {
                     .font(Font.custom("Roboto-Bold", size:20))
                     .foregroundColor(Color("OppositeText"))
             }
-            .frame(width: UIScreen.main.bounds.size.width, height: 40)
+            .padding(10)
+            .frame(width: UIScreen.main.bounds.size.width)
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
             .animation(.easeIn)

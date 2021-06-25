@@ -128,6 +128,7 @@ struct TimerRound: View {
                                 if (right) {
                                     correct = "Correct"
                                     color = "Correct"
+                                    LocalStorage.coinsValue += 10
                                 } else {
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "Incorrect"
@@ -192,7 +193,8 @@ struct TimerRound: View {
                     .font(Font.custom("Roboto-Bold", size:20))
                     .foregroundColor(Color("OppositeText"))
             }
-            .frame(width: UIScreen.main.bounds.size.width, height: 40)
+            .padding(10)
+            .frame(width: UIScreen.main.bounds.size.width)
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
