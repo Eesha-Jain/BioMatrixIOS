@@ -38,6 +38,7 @@
 		8EA45CE8265765840001E030 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CE7265765840001E030 /* LocalStorage.swift */; };
 		8EA45CEC265765970001E030 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA45CEB265765970001E030 /* Question.swift */; };
 		8EEA7139266B1796007183DE /* ImportQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEA7138266B1796007183DE /* ImportQs.swift */; };
+		8EF0C711268596A200D981C1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0C710268596A200D981C1 /* Settings.swift */; };
 		8EFF704B2682E75100D8307F /* PreviousQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF704A2682E75100D8307F /* PreviousQuestions.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		8EA45CEB265765970001E030 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EEA7138266B1796007183DE /* ImportQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportQs.swift; sourceTree = "<group>"; };
+		8EF0C710268596A200D981C1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8EFF704A2682E75100D8307F /* PreviousQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousQuestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +104,10 @@
 		8E2E3A50265F2C07004F41D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8EA45CD0265762600001E030 /* Rounds */,
 				8EA45CDB265762F90001E030 /* PickRound.swift */,
 				8EA45CDE265763110001E030 /* Starred.swift */,
+				8EF0C710268596A200D981C1 /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,11 +133,8 @@
 		8EA45C9D265757D00001E030 /* BioMatrix */ = {
 			isa = PBXGroup;
 			children = (
-				8E2E3A4F265F2BCE004F41D4 /* Assets */,
 				8EB26E7E2659F75D004365EB /* Helper */,
 				8EA45CE3265765550001E030 /* Data */,
-				8EA45CD0265762600001E030 /* Rounds */,
-				8EA45CB6265761520001E030 /* Fonts */,
 				8E2E3A50265F2C07004F41D4 /* Views */,
 				8EA45C9E265757D00001E030 /* BioMatrixApp.swift */,
 				8EA45CE4265765690001E030 /* Welcome.swift */,
@@ -195,6 +196,8 @@
 		8EB26E7E2659F75D004365EB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8EA45CB6265761520001E030 /* Fonts */,
+				8E2E3A4F265F2BCE004F41D4 /* Assets */,
 				8E8C3AEA26672B6E003E3D22 /* QuestionFunctions.swift */,
 				8E8C3AED26672B78003E3D22 /* StarredFunctions.swift */,
 				8EEA7138266B1796007183DE /* ImportQs.swift */,
@@ -297,6 +300,7 @@
 				8EA45CE5265765690001E030 /* Welcome.swift in Sources */,
 				8E8C3AEE26672B78003E3D22 /* StarredFunctions.swift in Sources */,
 				8EA45CDC265762F90001E030 /* PickRound.swift in Sources */,
+				8EF0C711268596A200D981C1 /* Settings.swift in Sources */,
 				8EFF704B2682E75100D8307F /* PreviousQuestions.swift in Sources */,
 				8EEA7139266B1796007183DE /* ImportQs.swift in Sources */,
 				8EA45CD22657629E0001E030 /* TurtleRound.swift in Sources */,
