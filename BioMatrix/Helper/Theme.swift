@@ -5,6 +5,7 @@ import Foundation
 struct Theme: Identifiable {
     var id: String { name }
     var name: String
+    var cost: Int
 }
 
 struct ColorType: Identifiable {

@@ -79,7 +79,7 @@ struct Starred: View {
                 Image(systemName: "circlebadge.2.fill")
                     .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                     .padding([.leading], 20)
-                Text("\(coins) Coins")
+                Text("\(coins)")
                     .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                 
                 Spacer()

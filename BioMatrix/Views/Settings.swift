@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct Settings: View {
-    private var themeList: [Theme] = [Theme(name: "Normal"), Theme(name: "Dark")]
+    private var themeList: [Theme] = [Theme(name: "Normal", cost: 0), Theme(name: "Dark", cost: 0)]
     private var colorList: [ColorType] = [
         ColorType(name: "Background"),
         ColorType(name: "Answer"),
@@ -24,20 +24,38 @@ struct Settings: View {
         ColorType(name: "White")
     ]
     
+    @State private var selectedTheme = LocalStorage.appThemeValue
+    @State var coins: Int = LocalStorage.coinsValue
+    
     var body: some View {
         VStack {
-            LinearGradient(gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Purple"), Color("\(LocalStorage.appThemeValue)Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [Color("\(selectedTheme)Purple"), Color("\(selectedTheme)Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .frame(height: 50)
                 .mask(Text("BIOMATRIX"))
-                .foregroundColor(Color("\(LocalStorage.appThemeValue)Purple"))
+                .foregroundColor(Color("\(selectedTheme)Purple"))
                 .font(Font.custom("Roboto-Bold", size: 60))
             
-            Spacer()
+            Picker(selection: $selectedTheme, label: Text("Pick a Theme").foregroundColor(Color("\(selectedTheme)OppositeText"))) {
+                ForEach(0 ..< themeList.count) {
+                    Text(themeList[$0].name)
+                }
+            }
+            .onChange(of: selectedTheme, perform: { value in
+                LocalStorage.appThemeValue = selectedTheme
+            })
             
             ForEach(themeList) { theme in
-                Text(theme.name)
-                    .font(Font.custom("Roboto-Bold", size: 20))
-                    .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeText"))
+                HStack {
+                    Text(theme.name + " - ")
+                        .font(Font.custom("Roboto-Bold", size: 20))
+                        .foregroundColor(Color("\(selectedTheme)OppositeText"))
+                    
+                    Image(systemName: "circlebadge.2.fill")
+                        .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
+                    
+                    Text("\(theme.cost)")
+                        .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
+                }
                 
                 ScrollView(.horizontal) {
                     HStack {
@@ -53,6 +71,21 @@ struct Settings: View {
             }
             
             Spacer()
+            
+            HStack {
+                Image(systemName: "circlebadge.2.fill")
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
+                    .padding([.leading], 20)
+                Text("\(coins)")
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
+                
+                Spacer()
+            }
+            .padding([.top, .bottom], 5)
+            .background(Color("\(LocalStorage.appThemeValue)SlightGray"))
+        }
+        .onAppear {
+            selectedTheme = LocalStorage.appThemeValue
         }
     }
 }
