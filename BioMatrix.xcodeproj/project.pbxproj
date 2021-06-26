@@ -79,7 +79,6 @@
 		8EB26E782659E62C004365EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EEA7138266B1796007183DE /* ImportQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportQs.swift; sourceTree = "<group>"; };
 		8EF0C710268596A200D981C1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		8EF0C71426859EC600D981C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EF0C7162686C1BF00D981C1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8EFF704A2682E75100D8307F /* PreviousQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousQuestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +143,6 @@
 				8EA45CA0265757D00001E030 /* ContentView.swift */,
 				8EA45CA7265757D10001E030 /* Info.plist */,
 				8EA45CA4265757D10001E030 /* Preview Content */,
-				8EF0C71426859EC600D981C1 /* README.md */,
 			);
 			path = BioMatrix;
 			sourceTree = "<group>";
