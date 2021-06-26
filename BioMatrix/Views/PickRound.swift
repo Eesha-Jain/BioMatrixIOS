@@ -8,10 +8,10 @@ struct PickRound: View {
     var body: some View {
         VStack {
             VStack {
-                LinearGradient(gradient: Gradient(colors: [Color("Purple"), Color("Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                LinearGradient(gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Purple"), Color("\(LocalStorage.appThemeValue)Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .frame(height: 50)
                     .mask(Text("BIOMATRIX"))
-                    .foregroundColor(Color("Purple"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Purple"))
                     .font(Font.custom("Roboto-Bold", size: 60))
                 
                 Spacer()
@@ -20,42 +20,42 @@ struct PickRound: View {
                     Text("Turtle Round")
                 }.padding(20)
                 .padding([.leading, .trailing], 100)
-                .foregroundColor(Color("Text"))
+                .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                 .cornerRadius(25)
                 .background(
                     RoundedRectangle(
                         cornerRadius: 100,
                         style: .continuous
                     )
-                    .fill(Color("Red"))
+                    .fill(Color("\(LocalStorage.appThemeValue)Red"))
                 )
                 
                 NavigationLink(destination: TimerRound()) {
                     Text("Timer Round")
                 }.padding(20)
                 .padding([.leading, .trailing], 100)
-                .foregroundColor(Color("Text"))
+                .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                 .cornerRadius(25)
                 .background(
                     RoundedRectangle(
                         cornerRadius: 100,
                         style: .continuous
                     )
-                    .fill(Color("Red"))
+                    .fill(Color("\(LocalStorage.appThemeValue)Red"))
                 )
                 
                 NavigationLink(destination: SpeedRound()) {
                     Text("Speed Round")
                 }.padding(20)
                 .padding([.leading, .trailing], 100)
-                .foregroundColor(Color("Text"))
+                .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                 .cornerRadius(25)
                 .background(
                     RoundedRectangle(
                         cornerRadius: 100,
                         style: .continuous
                     )
-                    .fill(Color("Red"))
+                    .fill(Color("\(LocalStorage.appThemeValue)Red"))
                 )
                 
                 Spacer()
@@ -63,15 +63,15 @@ struct PickRound: View {
             
             HStack {
                 Image(systemName: "circlebadge.2.fill")
-                    .foregroundColor(Color("Coin"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                     .padding([.leading], 20)
                 Text("\(coins) Coins")
-                    .foregroundColor(Color("Coin"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                 
                 Spacer()
             }
             .padding([.top, .bottom], 5)
-            .background(Color("SlightGray"))
+            .background(Color("\(LocalStorage.appThemeValue)SlightGray"))
         }.onAppear(perform: {
             LocalStorage.currentQuestion.question = newQuestion()
             coins = LocalStorage.coinsValue

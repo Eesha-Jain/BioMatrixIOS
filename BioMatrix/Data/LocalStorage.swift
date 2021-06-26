@@ -12,6 +12,7 @@ class LocalStorage {
     private static var questionsList: String = "questionsList"
     private static var curQuestion: String = "currentQuestion"
     private static var coins: String = "coins"
+    private static var theme: String = "appTheme"
     
     public static var launchedValue: String {
         set {
@@ -20,6 +21,16 @@ class LocalStorage {
         
         get {
             UserDefaults.standard.string(forKey: hasLaunched) ?? "false"
+        }
+    }
+    
+    public static var appThemeValue: String {
+        set {
+            UserDefaults.standard.set(newValue, forKey: theme)
+        }
+        
+        get {
+            UserDefaults.standard.string(forKey: theme) ?? "Normal"
         }
     }
     

@@ -11,7 +11,7 @@ struct TurtleRound: View {
     @State var answer: String = ""
     @State var correct: String = ""
     @State var opacity: Double = 0
-    @State var color: String = "White"
+    @State var color: String = "\(LocalStorage.appThemeValue)White"
     
     //Other Variables
     @State var question = LocalStorage.currentQuestion.question
@@ -22,13 +22,13 @@ struct TurtleRound: View {
             ScrollView(.vertical) {
                 VStack {
                     //BioMatrix Text
-                    LinearGradient(gradient: Gradient(colors: [Color("Purple"), Color("Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    LinearGradient(gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Purple"), Color("\(LocalStorage.appThemeValue)Blue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .frame(height: 50)
                         .mask(Text("BIOMATRIX"))
-                        .foregroundColor(Color("Purple"))
+                        .foregroundColor(Color("\(LocalStorage.appThemeValue)Purple"))
                         .font(Font.custom("Roboto-Bold", size: 60))
                         .padding([.bottom], 10)
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                        .animation(.easeIn)
                         .animation(.easeOut)
                     
                     //Question
@@ -37,12 +37,12 @@ struct TurtleRound: View {
                             HStack {
                                 Spacer()
                                 Text(question.category)
-                                    .foregroundColor(Color("Text"))
+                                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                                     .font(Font.custom("Roboto-Regular", size: 20))
                                 Spacer()
                                 
                                 Image(systemName: "star.fill")
-                                    .foregroundColor(Color(question.starred ? "StarYes" : "StarNo"))
+                                    .foregroundColor(Color(question.starred ? "\(LocalStorage.appThemeValue)StarYes" : "\(LocalStorage.appThemeValue)StarNo"))
                                     .onTapGesture {
                                         changeStarred()
                                         question = LocalStorage.currentQuestion.question
@@ -50,7 +50,7 @@ struct TurtleRound: View {
                             }
                             
                             Text(question.question)
-                                .foregroundColor(Color("Text"))
+                                .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                                 .font(Font.custom("Roboto-Light", size: 20))
                             
                         }.padding(10)
@@ -61,7 +61,7 @@ struct TurtleRound: View {
                             cornerRadius: 12,
                             style: .continuous
                         )
-                        .fill(Color("Red"))
+                        .fill(Color("\(LocalStorage.appThemeValue)Red"))
                     )
                     .padding([.bottom], 5)
                     .animation(.easeIn)
@@ -75,9 +75,9 @@ struct TurtleRound: View {
                             .frame(width: UIScreen.main.bounds.size.width * 0.60)
                             .background(
                                 RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                    .fill(Color("Answer"))
+                                    .fill(Color("\(LocalStorage.appThemeValue)Answer"))
                             )
-                            .foregroundColor(Color("OppositeText"))
+                            .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeText"))
                             .font(Font.custom("Roboto-Light", size: 20))
                         
                         Button(action: {
@@ -93,11 +93,11 @@ struct TurtleRound: View {
                                 
                                 if (right) {
                                     correct = "Correct"
-                                    color = "Correct"
+                                    color = "\(LocalStorage.appThemeValue)Correct"
                                     LocalStorage.coinsValue += 5
                                 } else {
                                     correct = "Incorrect. Answer: \(question.answer[0])"
-                                    color = "Incorrect"
+                                    color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }
                             }
                         }, label: {
@@ -107,12 +107,12 @@ struct TurtleRound: View {
                         .frame(width: UIScreen.main.bounds.size.width * 0.25)
                         .background(
                             RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .fill(Color("Submit"))
+                                .fill(Color("\(LocalStorage.appThemeValue)Submit"))
                         )
-                        .foregroundColor(Color("OppositeText"))
+                        .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeText"))
                         .font(Font.custom("Roboto-Light", size: 20))
                     }.padding([.bottom], 10)
-                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeIn)
                     .animation(.easeOut)
                     
                     //Next
@@ -125,7 +125,7 @@ struct TurtleRound: View {
                         question = newQuestion()
                         opacity = 0
                         answer = ""
-                        color = "White"
+                        color = "\(LocalStorage.appThemeValue)White"
                         correct = ""
                     }, label: {
                         Text("Next")
@@ -133,13 +133,13 @@ struct TurtleRound: View {
                     .frame(width: UIScreen.main.bounds.size.width * 0.9)
                     .background(
                         RoundedRectangle(cornerRadius: 100, style: .continuous)
-                            .fill(Color("Purple"))
+                            .fill(Color("\(LocalStorage.appThemeValue)Purple"))
                     )
-                    .foregroundColor(Color("Text"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                     .font(Font.custom("Roboto-Light", size: 20))
                     .opacity(opacity)
                     .padding([.bottom], 10)
-                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+                    .animation(.easeIn)
                     .animation(.easeOut)
                     
                     //Make Text go to Top
@@ -157,13 +157,13 @@ struct TurtleRound: View {
                 Text("\(correct)")
                     .lineLimit(nil)
                     .font(Font.custom("Roboto-Bold", size:20))
-                    .foregroundColor(Color("OppositeText"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeText"))
             }
             .padding(10)
             .frame(width: UIScreen.main.bounds.size.width)
             .background(Color(color).edgesIgnoringSafeArea(.bottom))
             .opacity(opacity)
-            .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+            .animation(.easeIn)
             .animation(.easeOut)
         }.onAppear(perform: {
             question = LocalStorage.currentQuestion.question

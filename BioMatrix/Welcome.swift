@@ -21,7 +21,7 @@ struct Welcome: View {
                 
                 //Title
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("Blue"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing
+                    gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Blue"), Color("\(LocalStorage.appThemeValue)Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing
                 ).mask (
                     Text("Welcome to BioMatrix!")
                         .font(Font.custom("Roboto-Bold", size: 30))
@@ -31,7 +31,7 @@ struct Welcome: View {
                 
                 //Sub
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("Blue"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing
+                    gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Blue"), Color("\(LocalStorage.appThemeValue)Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing
                 ).mask (
                     Text("Pick a round and answer biology questions!")
                         .font(Font.custom("Roboto-Light", size: 16))
@@ -56,7 +56,7 @@ struct Welcome: View {
                     Text("Get Started!")
                 })
                 .padding()
-                .background(LinearGradient(gradient: Gradient(colors: [Color("Blue"), Color("Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                .background(LinearGradient(gradient: Gradient(colors: [Color("\(LocalStorage.appThemeValue)Blue"), Color("\(LocalStorage.appThemeValue)Purple")]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .cornerRadius(7)
                 .foregroundColor(.white)
                 .font(Font.custom("Roboto-Light", size: 16))

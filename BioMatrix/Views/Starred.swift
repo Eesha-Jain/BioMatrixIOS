@@ -23,12 +23,12 @@ struct Starred: View {
                                 HStack {
                                     Spacer()
                                     Text(question.category)
-                                        .foregroundColor(Color("Text"))
+                                        .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                                         .font(Font.custom("Roboto-Regular", size: 20))
                                     Spacer()
                                     
                                     Image(systemName: "star.fill")
-                                        .foregroundColor(Color("StarYes"))
+                                        .foregroundColor(Color("\(LocalStorage.appThemeValue)StarYes"))
                                         .onTapGesture {
                                             changeStarredPage(q: question)
                                             starredQuestions = getStarredQuestions()
@@ -36,13 +36,13 @@ struct Starred: View {
                                 }
                                 
                                 Text(question.question)
-                                    .foregroundColor(Color("Text"))
+                                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                                     .font(Font.custom("Roboto-Light", size: 20))
                                     .padding([.bottom], 5)
                                 
                                 HStack {
                                     Text("Answer: " + question.answer[0])
-                                        .foregroundColor(Color("Text"))
+                                        .foregroundColor(Color("\(LocalStorage.appThemeValue)Text"))
                                         .font(Font.custom("Roboto-LightItalic", size: 20))
                                     Spacer()
                                 }.padding([.leading], 20)
@@ -55,18 +55,18 @@ struct Starred: View {
                                 cornerRadius: 12,
                                 style: .continuous
                             )
-                            .fill(Color("Red"))
+                            .fill(Color("\(LocalStorage.appThemeValue)Red"))
                         )
                         .padding([.bottom], 5)
                     }
                 } else {
                     HStack {
                         Text("No starred questions")
-                            .foregroundColor(Color("OppositeGray"))
+                            .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeGray"))
                             .font(Font.custom("Roboto-LightItalic", size: 20))
                         
                         Image(systemName: "star.fill")
-                            .foregroundColor(Color("OppositeGray"))
+                            .foregroundColor(Color("\(LocalStorage.appThemeValue)OppositeGray"))
                     }
                 }
             }.onAppear {
@@ -77,15 +77,15 @@ struct Starred: View {
             
             HStack {
                 Image(systemName: "circlebadge.2.fill")
-                    .foregroundColor(Color("Coin"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                     .padding([.leading], 20)
                 Text("\(coins) Coins")
-                    .foregroundColor(Color("Coin"))
+                    .foregroundColor(Color("\(LocalStorage.appThemeValue)Coin"))
                 
                 Spacer()
             }
             .padding([.top, .bottom], 5)
-            .background(Color("SlightGray"))
+            .background(Color("\(LocalStorage.appThemeValue)SlightGray"))
         }.onAppear {
             coins = LocalStorage.coinsValue
         }

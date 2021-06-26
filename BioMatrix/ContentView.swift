@@ -22,6 +22,12 @@ struct ContentView: View {
                         Image(systemName: "star.fill")
                         Text("Starred")
                     }
+                
+                Settings()
+                    .tabItem {
+                        Image(systemName: "gearshape.fill")
+                        Text("Settings")
+                    }
             }
         }
     }
