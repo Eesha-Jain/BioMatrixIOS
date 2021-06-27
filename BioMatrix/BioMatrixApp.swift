@@ -12,19 +12,11 @@ struct BioMatrixApp: App {
     var body: some Scene {
         WindowGroup {
             if (LocalStorage.launchedValue == "false") {
-                ZStack {
-                    Welcome()
-                }
-                .background(Color("\(LocalStorage.appThemeValue)Background"))
-                .edgesIgnoringSafeArea(.all)
+                Welcome()
             } else {
-                ZStack {
-                    ContentView().onAppear {
-                        LocalStorage.currentQuestion.set = false
-                    }
+                ContentView().onAppear {
+                    LocalStorage.currentQuestion.set = false
                 }
-                .background(Color("\(LocalStorage.appThemeValue)Background"))
-                .edgesIgnoringSafeArea(.all)
             }
         }
     }

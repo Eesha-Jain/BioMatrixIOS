@@ -48,6 +48,9 @@ struct Settings: View {
                 }
                 .pickerStyle(MenuPickerStyle())
                 .padding([.top, .bottom], 30)
+                .onChange(of: selectedTheme, perform: { (value) in
+                    LocalStorage.appThemeValue = selectedTheme
+                })
                 
                 ForEach(themeList) { theme in
                     HStack {
@@ -92,9 +95,9 @@ struct Settings: View {
             .onAppear {
                 selectedTheme = LocalStorage.appThemeValue
             }
+            
         }
-        .background(Color("\(selectedTheme)Background"))
-        .edgesIgnoringSafeArea(.all)
+        .background(Color("\(selectedTheme)Background").ignoresSafeArea())
     }
 }
 

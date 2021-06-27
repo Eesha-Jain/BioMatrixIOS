@@ -108,8 +108,8 @@
 			children = (
 				8EA45CD0265762600001E030 /* Rounds */,
 				8EA45CDB265762F90001E030 /* PickRound.swift */,
-				8EA45CDE265763110001E030 /* Starred.swift */,
 				8EF0C710268596A200D981C1 /* Settings.swift */,
+				8EA45CDE265763110001E030 /* Starred.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				8EA45CD12657629E0001E030 /* TurtleRound.swift */,
-				8EA45CD5265762A70001E030 /* TimerRound.swift */,
 				8EA45CD8265762B70001E030 /* SpeedRound.swift */,
+				8EA45CD5265762A70001E030 /* TimerRound.swift */,
 			);
 			path = Rounds;
 			sourceTree = "<group>";

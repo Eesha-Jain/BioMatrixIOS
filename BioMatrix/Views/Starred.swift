@@ -12,6 +12,7 @@ struct Starred: View {
     @State var coins: Int = LocalStorage.coinsValue
     
     var body: some View {
+        ZStack {
         VStack {
             Spacer()
             
@@ -89,6 +90,7 @@ struct Starred: View {
         }.onAppear {
             coins = LocalStorage.coinsValue
         }
+        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
     }
 }
 
