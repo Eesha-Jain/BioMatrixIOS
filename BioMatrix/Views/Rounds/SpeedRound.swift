@@ -22,6 +22,7 @@ struct SpeedRound: View {
     @State var list: [Question] = []
    
     var body: some View {
+        ZStack {
         VStack {
             ScrollView(.vertical) {
                 VStack {
@@ -73,7 +74,7 @@ struct SpeedRound: View {
                                 Spacer()
                                 
                                 Image(systemName: "star.fill")
-                                    .foregroundColor(Color(question.starred ? "\(LocalStorage.appThemeValue)StarYes" : "\(LocalStorage.appThemeValue)StarYes"))
+                                    .foregroundColor(Color(question.starred ? "\(LocalStorage.appThemeValue)StarYes" : "\(LocalStorage.appThemeValue)StarNo"))
                                     .onTapGesture {
                                         changeStarred()
                                         question = LocalStorage.currentQuestion.question
@@ -129,6 +130,10 @@ struct SpeedRound: View {
                                     LocalStorage.coinsValue += 20
                                 } else {
                                     LocalStorage.coinsValue -= 5
+                                    if (LocalStorage.coinsValue < 0) {
+                                        LocalStorage.coinsValue = 0
+                                    }
+                                    
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }
@@ -201,6 +206,7 @@ struct SpeedRound: View {
         }.onAppear(perform: {
             question = LocalStorage.currentQuestion.question
         })
+        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
     }
 }
 

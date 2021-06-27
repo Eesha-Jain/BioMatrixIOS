@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct Settings: View {
-    private var themeList: [Theme] = [Theme(name: "Normal", cost: 0), Theme(name: "Dark", cost: 0), Theme(name: "Dark", cost: 20)]
+    private var themeList: [Theme] = [Theme(name: "Normal", cost: 0), Theme(name: "Dark", cost: 0), Theme(name: "Fall", cost: 20)]
     private var colorList: [ColorType] = [
         ColorType(name: "Background"),
         ColorType(name: "Answer"),
@@ -41,7 +41,7 @@ struct Settings: View {
                         .font(Font.custom("Roboto-Light", size: 20))
                 ) {
                     ForEach(0 ..< themeList.count) {
-                        if (themeList[$0].cost >= coins) {
+                        if (themeList[$0].cost <= coins) {
                             Text(themeList[$0].name).tag(themeList[$0].name)
                         }
                     }
@@ -53,7 +53,7 @@ struct Settings: View {
                 })
                 
                 ForEach(themeList) { theme in
-                    if (theme.cost >= coins) {
+                    if (theme.cost <= coins) {
                         HStack {
                             Text(theme.name + " - ")
                                 .font(Font.custom("Roboto-Bold", size: 20))
@@ -96,6 +96,7 @@ struct Settings: View {
             }
             .onAppear {
                 selectedTheme = LocalStorage.appThemeValue
+                coins = LocalStorage.coinsValue
             }
             
         }

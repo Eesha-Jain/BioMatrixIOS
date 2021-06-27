@@ -23,6 +23,7 @@ struct TimerRound: View {
     @State var list: [Question] = []
    
     var body: some View {
+        ZStack {
         VStack {
             ScrollView(.vertical) {
                 VStack {
@@ -130,6 +131,10 @@ struct TimerRound: View {
                                     LocalStorage.coinsValue += 15
                                 } else {
                                     LocalStorage.coinsValue -= 5
+                                    if (LocalStorage.coinsValue < 0) {
+                                        LocalStorage.coinsValue = 0
+                                    }
+                                    
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }
@@ -202,6 +207,7 @@ struct TimerRound: View {
         }.onAppear(perform: {
             question = LocalStorage.currentQuestion.question
         })
+        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
     }
 }
 

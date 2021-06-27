@@ -18,6 +18,7 @@ struct TurtleRound: View {
     @State var list: [Question] = []
    
     var body: some View {
+        ZStack {
         VStack {
             ScrollView(.vertical) {
                 VStack {
@@ -97,6 +98,10 @@ struct TurtleRound: View {
                                     LocalStorage.coinsValue += 10
                                 } else {
                                     LocalStorage.coinsValue -= 5
+                                    if (LocalStorage.coinsValue < 0) {
+                                        LocalStorage.coinsValue = 0
+                                    }
+                                    
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }
@@ -169,6 +174,7 @@ struct TurtleRound: View {
         }.onAppear(perform: {
             question = LocalStorage.currentQuestion.question
         })
+        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
     }
 }
 
