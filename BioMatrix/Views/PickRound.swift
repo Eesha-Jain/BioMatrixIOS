@@ -4,6 +4,7 @@ import SwiftUI
 
 struct PickRound: View {
     @State var coins: Int = LocalStorage.coinsValue
+    @State var selectedTheme: String = LocalStorage.appThemeValue
     
     var body: some View {
         ZStack {
@@ -77,7 +78,10 @@ struct PickRound: View {
                 LocalStorage.currentQuestion.question = newQuestion()
                 coins = LocalStorage.coinsValue
             })
-        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
+        }.background(Color("\(selectedTheme)Background").ignoresSafeArea())
+        .onAppear {
+            selectedTheme = LocalStorage.appThemeValue
+        }
     }
 }
 

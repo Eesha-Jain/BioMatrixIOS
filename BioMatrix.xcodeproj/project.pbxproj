@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				8EA45CD12657629E0001E030 /* TurtleRound.swift */,
-				8EA45CD8265762B70001E030 /* SpeedRound.swift */,
 				8EA45CD5265762A70001E030 /* TimerRound.swift */,
+				8EA45CD8265762B70001E030 /* SpeedRound.swift */,
 			);
 			path = Rounds;
 			sourceTree = "<group>";

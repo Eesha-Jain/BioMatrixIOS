@@ -94,8 +94,9 @@ struct TurtleRound: View {
                                 if (right) {
                                     correct = "Correct"
                                     color = "\(LocalStorage.appThemeValue)Correct"
-                                    LocalStorage.coinsValue += 5
+                                    LocalStorage.coinsValue += 10
                                 } else {
+                                    LocalStorage.coinsValue -= 5
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }

@@ -127,8 +127,9 @@ struct TimerRound: View {
                                 if (right) {
                                     correct = "Correct"
                                     color = "\(LocalStorage.appThemeValue)Correct"
-                                    LocalStorage.coinsValue += 10
+                                    LocalStorage.coinsValue += 15
                                 } else {
+                                    LocalStorage.coinsValue -= 5
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }

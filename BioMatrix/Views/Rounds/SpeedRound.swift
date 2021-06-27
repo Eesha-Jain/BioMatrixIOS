@@ -128,6 +128,7 @@ struct SpeedRound: View {
                                     color = "\(LocalStorage.appThemeValue)Correct"
                                     LocalStorage.coinsValue += 20
                                 } else {
+                                    LocalStorage.coinsValue -= 5
                                     correct = "Incorrect. Answer: \(question.answer[0])"
                                     color = "\(LocalStorage.appThemeValue)Incorrect"
                                 }

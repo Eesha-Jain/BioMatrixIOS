@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Starred: View {
     @State var starredQuestions: [Question] = getStarredQuestions()
+    @State var selectedTheme: String = LocalStorage.appThemeValue
     @State var coins: Int = LocalStorage.coinsValue
     
     var body: some View {
@@ -90,7 +91,10 @@ struct Starred: View {
         }.onAppear {
             coins = LocalStorage.coinsValue
         }
-        }.background(Color("\(LocalStorage.appThemeValue)Background").ignoresSafeArea())
+        }.background(Color("\(selectedTheme)Background").ignoresSafeArea())
+        .onAppear {
+            selectedTheme = LocalStorage.appThemeValue
+        }
     }
 }
 

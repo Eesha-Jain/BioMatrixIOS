@@ -29,7 +29,9 @@ struct ContentView: View {
                         Text("Settings")
                     }
             }
-        }
+        }.onAppear {
+            UITabBar.appearance().barTintColor = .darkGray
+        }.accentColor(Color("DarkIconColor"))
     }
 }
 
