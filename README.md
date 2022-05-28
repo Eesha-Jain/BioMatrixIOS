@@ -1,5 +1,5 @@
 # BioMatrix
-![BioMatrix](https://user-images.githubusercontent.com/68827992/170835928-c3000eb8-5fcb-4ba2-9e34-d3fb8c3360c5.png)
+![BioMatrix](https://user-images.githubusercontent.com/68827992/170835976-230c1b78-2e76-4c47-a4be-311947659e90.png)
 
 Welcome to BioMatrix! It is an app that allows users to quiz themselves on a variety of biology questions! This app allows various functionalities!
 
