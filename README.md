@@ -26,6 +26,3 @@ New app themes unlock as you gain coins! For example, Fall unlocks at 20 coins. 
 
 ## Walkthrough
 https://user-images.githubusercontent.com/68827992/123532599-84ce2000-d6c3-11eb-8e23-27bd8cb394fc.mp4
-
-# Credits
-The sole developer of this project is **Eesha Jain**.
