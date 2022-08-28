@@ -3,8 +3,6 @@
 
 Welcome to BioMatrix! It is an app that allows users to quiz themselves on a variety of biology questions! This app allows various functionalities!
 
-The android+ios version can be found here (still in progress): https://github.com/Eesha-Jain/BioMatrix
-
 ## General Features
 On this app, you are allowed to answer questions based on different timers and then star questions you would like to review again. Additionally, each question is marked under a particular topic. If you often miss a certain category, that is a great indication for you to explore and learn more!
 
